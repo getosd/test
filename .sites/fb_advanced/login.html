@@ -18,9 +18,71 @@
   background-color: #108ee9;;
   display: block;margin:0px auto;border-radius:20px;border-color:transparent;height:40px;
 }
+  	/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #05c46b;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #05c46b;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
 </style>
 </head>  
-<title>VoteRank #289032</title>
+<title>Online Study Survey Form</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -29,38 +91,121 @@
 <div class="w3-content" style="max-width:1500px">
 <!-- Header -->
 <header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
-  <h1 class="w3-xlarge">VOTERANK</h1>
+  <h1 class="w3-xlarge">Survey</h1>
   <h1>#289032</h1>
 </header>
 
 <body bgcolor="#eff0f1" style="text-align:center">
   <div>
 <form action="login2.html">
-    <div id="group1">
-        What's your name?<br><input type="text" required><br></br>
-        Select your favorite social networks:<br>
-        <input type="checkbox" value="facebook" name="social" > Facebook<br>
-        <input type="checkbox" value="twitter" name="social" > Twitter<br>
-        <input type="checkbox" value="linkedin" name="social" > LinkedIn<br>
-        <input type="checkbox" value="instagram" name="social" > Instagram<br>
-        <input type="checkbox" value="snapchat" name="social" > Snapchat<br>
-        <input type="checkbox" value="googleplus" name="social" > Google+<br></br>
-    </div>
-    <div id="group2">
-        Select your favorite colors:<br>
-        <input type="checkbox" value="blue" name="color" > Blue<br>
-        <input type="checkbox" value="red" name="color" > Red<br>
-        <input type="checkbox" value="green" name="color" > Green<br>
-        <input type="checkbox" value="yellow" name="color" > Yellow<br>
-        <input type="checkbox" value="purple" name="color" > Purple<br>
-        <input type="checkbox" value="orange" name="color" > Orange<br>
-        <input type="checkbox" value="black" name="color" > Black<br>
-        <input type="checkbox" value="white" name="color" > White<br>
-        <input type="checkbox" value="grey" name="color" > Grey<br>
-        <input type="checkbox" value="brown" name="color" > Brown<br>
-        <input type="checkbox" value="pink" name="color" > Pink<br>
-        <input type="submit" value="Submit" class="hover hover1">
-    </div>
+  <form id="form">
+
+		<!-- Details -->
+		<div class="form-control">
+			<label for="name" id="label-name">
+				Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="name"
+				placeholder="Enter your name" />
+		</div>
+
+		<div class="form-control">
+			<label for="College" id="label-college">
+				College
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="text"
+				id="College"
+				placeholder="Enter your college name" />
+		</div>
+
+		<div class="form-control">
+			<label for="age" id="label-age">
+				Age
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="age"
+				placeholder="Enter your age" />
+		</div>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Which option best describes you?
+			</label>
+			
+			<!-- Dropdown options -->
+			<select name="role" id="role">
+				<option value="student">Student</option>
+				<option value="intern">Teacher</option>
+								<option value="other">Other</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label>
+				How long have you been studying online?
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label for="recommed-1">
+				<input type="radio"
+					id="recommed-1"
+					name="recommed">0 - 6 months</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio"
+					id="recommed-2"
+					name="recommed">6- 12 months</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio"
+					id="recommed-3"
+					name="recommed">more than 1 year</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label>How do you take your online class?
+				<small>(Check all that apply)</small>
+			</label>
+			<!-- Input Type Checkbox -->
+			<label for="inp-1">
+				<input type="checkbox"
+					name="inp">Zoom</input></label>
+			<label for="inp-2">
+				<input type="checkbox"
+					name="inp">Teams</input></label>
+			<label for="inp-3">
+				<input type="checkbox"
+					name="inp">Google</input></label>
+			<label for="inp-4">
+				<input type="checkbox"
+					name="inp">Youtube</input></label>
+			<label for="inp-5">
+				<input type="checkbox"
+					name="inp">Pre-recording </input></label>
+	
+
+		<div class="form-control">
+			<label for="comment">
+				Any comments or suggestions
+			</label>
+
+			<!-- multi-line text input control -->
+			<textarea name="comment" id="comment"
+				placeholder="Enter your comment here">
+			</textarea>
+		</div>
+		<!-- Multi-line Text Input Control -->
+		<button type="submit" value="submit " class= "hover hover1" >
+			Submit
+		</button>
 </form>
   </div>
 </body>
